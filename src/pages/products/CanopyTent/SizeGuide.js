@@ -23,8 +23,8 @@ const SizeGuide = () => {
             </div>
             <div className="sizeGuide__datas">
                 {
-                    sizeGuide.sizes.map((size) => (
-                        <div className="sizeGuide__datas__row"  key={size.name}>
+                    sizeGuide.sizes.map((size, index) => (
+                        <div className="sizeGuide__datas__row"  key={index}>
                             <div className="sizeGuide__datas__row__cell head">
                                 <h3>{size.name}</h3>
                                 <p>{size.clearanceHeight}</p>
@@ -45,6 +45,7 @@ const SizeGuide = () => {
                                         :
                                         <img src="https://westshade.com/images/umbrella/unrelated.png" />
                                 }
+                            </div>
                             <div className="sizeGuide__datas__row__cell">
                                 {
                                     size.size3 ? 
@@ -93,7 +94,6 @@ const SizeGuide = () => {
                                         <img src="https://westshade.com/images/umbrella/unrelated.png" />
                                 }
                             </div>
-                        </div>
                         </div>
                     ))
                 }

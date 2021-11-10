@@ -103,6 +103,8 @@ body {
 
 .main-content {
   width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
   padding: 0 24px;
 }
 
@@ -171,6 +173,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
+  position: relative;
 }
 .product__options__type > button{
   width: 100%;
@@ -180,6 +183,17 @@ body {
   font-weight: 700;
   background: #ffffff;
   cursor: pointer;
+}
+.product__options__type > div {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 24px;
+  height: 6px;
+  background: #23a4ad;
+  border-radius: 3px;
+  transform: translateX(-50%);
+  transition: all .3s ease-in-out;
 }
 
 .product__options__sizes, .product__options__frames, .product__options__colors {
@@ -209,9 +223,10 @@ body {
   text-align: center;
   margin-bottom: 12px;
   cursor: pointer;
+  transition: all .3s ease-in-out;
 }
 .product__options__sizes > ul > li.active {
-  border: 3px solid rgb(35, 164, 173);
+  box-shadow: 0px 0px 0px 3px rgb(35, 164, 173);
   font-weight: 700;
 }
 .product__options__frames > ul > li {
@@ -222,9 +237,10 @@ body {
   text-align: center;
   margin-bottom: 12px;
   cursor: pointer;
+  transition: all .3s ease-in-out;
 }
 .product__options__frames > ul > li.active {
-  border: 3px solid rgb(35, 164, 173);
+  box-shadow: 0px 0px 0px 3px rgb(35, 164, 173);
   font-weight: 700;
 }
 .product__options__colors > ul > li {
@@ -263,6 +279,7 @@ body {
     display: block;
     margin: 0 auto;
     margin-top: 16px;
+    cursor: pointer;
 }
 .productFrames, .sizeGuide {
   margin-top: 24px;
@@ -355,21 +372,61 @@ body {
 }
 .sizeGuide__datas__row__cell.head {
   width: 140px;
+  display: block;
 }
 .sizeGuide__datas__row__cell.head > h3 {
   font-size: 14px;
   color: #262626;
   font-weight: bold;
+  text-align: left;
+
 }
 .sizeGuide__datas__row__cell.head > p {
   font-size: 12px;
   color: #8c8c8c;
+  text-align: left;
+
 }
 
 .features {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.productWall {
+  width: 100%;
+}
+
+.productWall__actions__action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.productWall__actions__action > div {
+  display: flex;
+}
+.productWall__actions__action > div > img {
+  margin-right: 12px;
+}
+.productWall__actions__action > div > div > h6 {
+  font-size: 14px;
+  margin-bottom: 4px;
+  color: #000;
+}
+.productWall__actions__action > div > div > p {
+  font-size: 14px;
+  color: #808080;
+}
+.productWall__actions__action > button {
+  width: 90px;
+  height: 32px;
+  font-size: 14px;
+  line-height: 22px;
+  background-color: transparent;
+  color: #8c8c8c;
+  border: 1px dashed #8c8c8c;
+  border-radius: 30px;
 }
 
 .feature {

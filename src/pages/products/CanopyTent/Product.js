@@ -4,6 +4,7 @@ import Modal from '../../../components/ui/Modal';
 import productOptions from "../../../data/productOptions"
 import useClickOutside from '../../../hooks/useClickOutside';
 import ProductFrames from './ProductFrames';
+import ProductWall from './ProductWall';
 import SizeGuide from './SizeGuide';
 
 const reducer = (state, {type, payload}) => {
@@ -32,7 +33,7 @@ const initialState = {
 
 const Product = () => {
     const [imageState, dispatch] = useReducer(reducer, initialState)
-    const [addWall, setAddWall] = useState(true);
+    const [addWall, setAddWall] = useState(false);
     const [mediaType, setMediaType] = useState("PHOTO");
     const [compareFrames, setCompareFrames] = useState(false);
     const [sizeGuide, setsizeGuide] = useState(false);
@@ -69,15 +70,18 @@ const Product = () => {
                 </div>
 
                 <div className="product__options__type">
-                    <button>
+                    <button onClick={() => setAddWall(false)}>
                         Basic
                     </button>
-                    <button>
+                    <button onClick={() => setAddWall(true)}>
                         +Wall
                     </button>
+                    <div style={{left: `${addWall ? "75%" : "25%"}`}}>
+
+                    </div>
                 </div>
                 {
-                    addWall ? 
+                    !addWall ? 
                     <>
                         <div className="product__options__sizes">
                             <h4>Size</h4>
@@ -94,7 +98,7 @@ const Product = () => {
                             <button onClick={() => setsizeGuide(true)}>
                                 Size Guide
                             </button>
-                            
+
                             {
                                 sizeGuide && 
                                 <Modal ref={sizeGuideModalRef} closeHandler={() => setsizeGuide(true)}>
@@ -136,9 +140,7 @@ const Product = () => {
                         </div> 
                     </>
                     :
-                    <>
-
-                    </>
+                    <ProductWall />
                 }
             </div>
         </div>

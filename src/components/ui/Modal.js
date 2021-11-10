@@ -3,10 +3,10 @@ import React from 'react'
 const Modal = React.forwardRef(({children, closeHandler},ref) => {
     return (
         <>
-            <div ref={ref} className="modal-overlay">
+            <div className="modal-overlay">
             </div>
             <div className="modal-wrapper">
-            <div className="modal">
+            <div ref={ref} className="modal">
                 <button onClick={closeHandler}>
                     <svg
                     xmlns="http://www.w3.org/2000/svg"

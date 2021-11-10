@@ -15,8 +15,7 @@ function App() {
           <Routes>
             <Route path="/products/canopy-tent" element={<CanopyTent />}>
             </Route>
-            <Route path="/">
-              
+            <Route path="/" element={<CanopyTent />}>
             </Route>
           </Routes>
         </Layout>

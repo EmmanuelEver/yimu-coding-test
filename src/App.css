@@ -118,6 +118,7 @@ body {
 
 .product__image__container {
   width: 100%;
+  padding: 0 10%;
 }
 
 .product__image__container > img{
@@ -503,6 +504,116 @@ body {
 }
 
 
+/* frame anatomy section */
+.frameAnatomy {
+  width: 100%;
+  padding: 54px 0;
+  background: rgb(247, 247, 247);
+  margin-bottom: 32px;
+  position: relative;
+}
+.frameAnatomy > h2 {
+  font-size: 28px;
+  color: #000000;
+  font-weight: 500;
+  margin-bottom: 38px;
+  text-align: center;
+}
+.frameAnatomy__image {
+  width: 566px;
+  height: 566px;
+  margin: 0 auto;
+  position: relative;
+}
+.frameAnatomy__image > img {
+  width: 100%;
+  object-fit: contain;
+}
+.frameAnatomy__image__point {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #23a4ad;
+  animation: pulse 2s linear infinite;
+  cursor: pointer;
+}
+.frameAnatomy__image__point:nth-of-type(1) {
+  top: 75px;
+  left: 5px;
+}
+.frameAnatomy__image__point:nth-of-type(2) {
+  top: 350px;
+  left: 15px;
+}
+.frameAnatomy__image__point:nth-of-type(3) {
+  top: 440px;
+  left: 370px;
+}
+.frameAnatomy__image__point:nth-of-type(4) {
+  top: 290px;
+  left: 535px;
+}
+.frameAnatomy__image__point:nth-of-type(5) {
+  top: 135px;
+  left: 535px;
+}
+.frameAnatomy__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: hsla(0,0%,100%,.8);
+  backdrop-filter: blur(20px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.frameAnatomy__overlay > img {
+  max-width: 250px;
+  width: 250px;
+  height: 250px;
+  object-fit: contain;
+  border: 1px solid #d9d9d9;
+}
+.frameAnatomy__overlay > h3 {
+  max-width: 250px;
+  color: rgb(38, 38, 38);
+  font-size: 20px;
+  line-height: 28px;
+  object-fit: contain;
+  font-weight: 500;
+}
+.frameAnatomy__overlay > p {
+  color: #8c8c8c;
+  font-size: 16px;
+  line-height: 20px;
+  object-fit: contain;
+  margin-bottom: 32px;
+  max-width: 250px;
+  text-align: center;
+}
+.frameAnatomy__overlay > button {
+  background: rgba(0, 0, 0, 0.3);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+.frameAnatomy__overlay > button:hover {
+  opacity: .3;
+}
+.frameAnatomy__overlay > button > svg{
+  fill: #ffffff;
+}
+/* end of frame anatomy section */
+
 .feature {
   display: flex;
   max-width: 1152px;
@@ -615,4 +726,19 @@ body {
 }
 .feature:nth-of-type(2) .slide > img {
   object-fit: contain;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(.95);
+    box-shadow: 0 0 0 0 rgba(35 164 173, 0.7);
+  }
+  70% {
+      transform: scale(1);
+      box-shadow: 0 0 0 70px rgba(35 164 173, 1);
+  }
+  100% {
+      transform: scale(.95);
+      box-shadow: 0 0 0 0 rgba(35 164 173, 1);
+  }
 }

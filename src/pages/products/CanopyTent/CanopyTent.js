@@ -1,6 +1,6 @@
 import React from 'react'
-import Features from './Features'
-import Product from './Product'
+import Features from '../../../components/page/Features'
+import Product from '../../../components/page/Product'
 
 const CanopyTent = () => {
     return (

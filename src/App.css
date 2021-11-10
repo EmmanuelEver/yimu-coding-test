@@ -397,12 +397,16 @@ body {
 .productWall {
   width: 100%;
 }
+.productWall__actions {
+  margin-top: 16px;
+}
 
 .productWall__actions__action {
-  margin-top: 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 64px;
+
 }
 .productWall__actions__action > div {
   display: flex;
@@ -440,9 +444,20 @@ body {
   flex: 1 1 0;
   padding: 0 10%;
 }
-.wallCustomizer__image > img{
+.wallCustomizer__image__wrapper {
+  width: 100%;
+  position: relative;
+}
+.wallCustomizer__image__wrapper > img{
   object-fit: contain;
   width: 100%;
+}
+.wallCustomizer__image__wrapper > img:nth-of-type(2){
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: contain;
 }
 .wallCustomizer__options {
   margin-top: 32px;

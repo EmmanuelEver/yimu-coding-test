@@ -140,7 +140,7 @@ const Product = () => {
                         </div> 
                     </>
                     :
-                    <ProductWall />
+                    <ProductWall color={imageState.color} size={imageState.size} frame={imageState.frame}/>
                 }
             </div>
         </div>

@@ -207,7 +207,7 @@ body {
   width: 100%;
   text-align: center;
 }
-.product__options__sizes > ul, .product__options__colors > ul, .product__options__frames > ul {
+.product__options__sizes > ul, .product__options__colors > ul, .product__options__frames > ul, .wallCustomizer__options__colors > ul {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
@@ -243,7 +243,7 @@ body {
   box-shadow: 0px 0px 0px 3px rgb(35, 164, 173);
   font-weight: 700;
 }
-.product__options__colors > ul > li {
+.product__options__colors > ul > li, .wallCustomizer__options__colors > ul > li {
   width: 38px;
   height: 38px;
   border-radius: 50%;
@@ -251,7 +251,7 @@ body {
   border: 1px solid #999999;
   cursor: pointer;
 }
-.product__options__colors > ul > li.active::before {
+.product__options__colors > ul > li.active::before, .wallCustomizer__options__colors > ul > li.active::before {
   content: "";
   position: absolute;
   top: 0;
@@ -399,6 +399,7 @@ body {
 }
 
 .productWall__actions__action {
+  margin-top: 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -427,7 +428,65 @@ body {
   color: #8c8c8c;
   border: 1px dashed #8c8c8c;
   border-radius: 30px;
+  cursor: pointer;
 }
+.productWall__actions__action > button:hover {
+  background-color: rgb(51, 51, 51);
+}
+.wallCustomizer {
+  display: flex;
+}
+.wallCustomizer__image {
+  flex: 1 1 0;
+  padding: 0 10%;
+}
+.wallCustomizer__image > img{
+  object-fit: contain;
+  width: 100%;
+}
+.wallCustomizer__options {
+  margin-top: 32px;
+  padding-right: 64px;
+  width: 424px;
+  
+}
+.wallCustomizer__options__type > h3, .wallCustomizer__options__colors > h3 {
+  text-align: center;
+  font-size: 16px;
+  color: #262626;
+}
+.wallCustomizer__options__type_cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 24px;
+  margin-top: 16px;
+}
+.wallCustomizer__options__type_cards__card {
+  height: 142px;
+  border-radius: 16px;
+  width: 104px;
+  padding: 14px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid rgb(217, 217, 217);
+  box-shadow: 0px 0px 0px 3px transparent;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+.wallCustomizer__options__type_cards__card > p{
+  font-size: 14px;
+  color: #545454;
+}
+.wallCustomizer__options__type_cards__card.active {
+  box-shadow: 0px 0px 0px 3px rgb(35, 164, 173);
+}
+.wallCustomizer__options__colors {
+  margin-top: 32px;
+}
+
 
 .feature {
   display: flex;
